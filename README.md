@@ -151,7 +151,7 @@
 const scriptURL = "https://script.google.com/macros/s/AKfycbyWS0yGkplc7S5jeG3SIXEjStqxGXUwHm_XI3Qaoy34Mmjt8Fk8MclWCdgaYsN4EcJ-7g/exec";
 
 /* 🔴 CHANGE THIS TO ADMIN NUMBER */
-const ADMIN_MOBILE = "918106404858"; // with country code
+const ADMIN_MOBILE = "+918106404858"; // with country code
 
 function submitForm() {
 
