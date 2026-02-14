@@ -42,7 +42,7 @@
     height: 140px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #0a58ca;
+    border: 0px solid #0a58ca;
   }
 
   h2 {
