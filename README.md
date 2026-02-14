@@ -166,7 +166,7 @@
 </div>
 
 <script>
-const scriptURL = "PASTE_YOUR_GOOGLE_APPS_SCRIPT_URL_HERE";
+const scriptURL = "https://script.google.com/macros/s/AKfycbyWS0yGkplc7S5jeG3SIXEjStqxGXUwHm_XI3Qaoy34Mmjt8Fk8MclWCdgaYsN4EcJ-7g/exec";
 const ADMIN_MOBILE = "918106404858";
 
 function submitForm() {
