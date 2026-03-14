@@ -6,219 +6,260 @@
 <title>MNC Job Registration | PATH INNOVATORS</title>
 
 <style>
-  * { box-sizing: border-box; }
+*{box-sizing:border-box;}
 
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #eef2f7;
-    padding: 20px;
-  }
+body{
+margin:0;
+font-family:Arial;
+background:#eef2f7;
+padding:20px;
+}
 
-  .wrapper {
-    max-width: 900px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-  }
+.wrapper{
+max-width:900px;
+margin:auto;
+display:flex;
+justify-content:center;
+}
 
-  .form-box {
-    width: 100%;
-    max-width: 420px;
-    background: #F5F5F5;
-    padding: 25px;
-    border-radius: 14px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  }
+.form-box{
+width:100%;
+max-width:420px;
+background:#F5F5F5;
+padding:25px;
+border-radius:14px;
+box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
 
-  .logo {
-    text-align: center;
-    margin-bottom: 15px;
-  }
+.logo{
+text-align:center;
+margin-bottom:15px;
+}
 
-  /* 🔵 CIRCULAR LOGO */
-  .logo img {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #0a58ca;
-  }
+.logo img{
+width:140px;
+height:140px;
+border-radius:50%;
+object-fit:cover;
+border:3px solid #0a58ca;
+}
 
-  h2 {
-    text-align: center;
-    color: #0a58ca;
-    margin-bottom: 15px;
-  }
+h2{
+text-align:center;
+color:#0a58ca;
+}
 
-  input, select {
-    width: 100%;
-    padding: 12px;
-    margin-top: 10px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    font-size: 15px;
-  }
+input,select{
+width:100%;
+padding:12px;
+margin-top:10px;
+border-radius:6px;
+border:1px solid #ccc;
+font-size:15px;
+}
 
-  .checkbox {
-    margin-top: 15px;
-    font-size: 14px;
-    display: flex;
-    gap: 8px;
-    align-items: flex-start;
-  }
+.checkbox{
+margin-top:15px;
+font-size:14px;
+display:flex;
+gap:8px;
+align-items:flex-start;
+}
 
-  button {
-    width: 100%;
-    padding: 14px;
-    margin-top: 18px;
-    background: #0a58ca;
-    color: white;
-    border: none;
-    font-size: 17px;
-    border-radius: 8px;
-    cursor: pointer;
-  }
+button{
+width:100%;
+padding:14px;
+margin-top:18px;
+background:#0a58ca;
+color:white;
+border:none;
+font-size:17px;
+border-radius:8px;
+cursor:pointer;
+}
 
-  button:hover {
-    background: #084298;
-  }
+button:hover{
+background:#084298;
+}
 
-  #msg {
-    margin-top: 12px;
-    text-align: center;
-    font-size: 14px;
-  }
+button:disabled{
+background:#999;
+cursor:not-allowed;
+}
 
-  /* ✅ THANK YOU SCREEN */
-  .thank-you {
-    display: none;
-    text-align: center;
-    padding: 30px 20px;
-  }
+#msg{
+margin-top:12px;
+text-align:center;
+font-size:14px;
+}
 
-  .thank-you h2 {
-    color: #198754;
-  }
+.thank-you{
+display:none;
+text-align:center;
+padding:30px 20px;
+}
 
-  @media (min-width: 768px) {
-    .form-box {
-      padding: 30px;
-    }
-  }
+.thank-you h2{
+color:#198754;
+}
 </style>
 </head>
 
 <body>
 
 <div class="wrapper">
-  <div class="form-box">
+<div class="form-box">
 
-    <!-- FORM SECTION -->
-    <div id="formSection">
+<div id="formSection">
 
-      <div class="logo">
-        <img src="logo.png" alt="PATH INNOVATORS Logo">
-      </div>
+<div class="logo">
+<img src="logo.png" alt="PATH INNOVATORS Logo">
+</div>
 
-      <h2>MNC Job Registration</h2>
+<h2>MNC Job Registration</h2>
 
-      <input type="text" id="name" placeholder="Full Name" required>
-      <input type="tel" id="mobile" placeholder="Mobile Number" required>
-      <input type="email" id="email" placeholder="Email ID" required>
+<form id="jobForm">
 
-      <input type="text" id="qualification" placeholder="Qualification">
-      <input type="number" id="yop" placeholder="Year of Passing">
-      <input type="text" id="experience" placeholder="Experience (Fresher / Years)">
+<input type="text" id="name" placeholder="Full Name" required>
 
-      <select id="company">
-        <option value="">Preferred Company</option>
-        <option>Wipro</option>
-        <option>Genpact</option>
-        <option>Accenture</option>
-        <option>Tech Mahindra</option>
-        <option>Cognizant</option>
-        <option>Other</option>
-      </select>
+<input type="tel" id="mobile" placeholder="Mobile Number" required>
 
-      <input type="text" id="location" placeholder="Current Location">
+<input type="email" id="email" placeholder="Email ID" required>
 
-      <div class="checkbox">
-        <input type="checkbox" id="consent">
-        <label for="consent">
-          I agree to share my details with the PATH INNOVATORS Consultancy for job-related communication via call, SMS, WhatsApp & email.
-        </label>
-      </div>
+<input type="text" id="qualification" placeholder="Qualification">
 
-      <button onclick="submitForm()">Submit Application</button>
+<input type="number" id="yop" placeholder="Year of Passing" min="1990" max="2035">
 
-      <div id="msg"></div>
-    </div>
+<input type="text" id="experience" placeholder="Experience (Fresher / Years)">
 
-    <!-- THANK YOU SECTION -->
-    <div class="thank-you" id="thankYou">
-      <h2>✅ Thank you for connecting with</h2>
-      <h2>PATH INNOVATORS</h2>
-      <p>Our team will contact you shortly regarding suitable MNC opportunities.</p>
-    </div>
+<select id="company">
+<option value="">Preferred Company</option>
+<option>Wipro</option>
+<option>Genpact</option>
+<option>Accenture</option>
+<option>Tech Mahindra</option>
+<option>Cognizant</option>
+<option>Other</option>
+</select>
 
-  </div>
+<input type="text" id="location" placeholder="Current Location">
+<input type="text" id="location" placeholder="Required Job Location">
+
+<div class="checkbox">
+<input type="checkbox" id="consent" required>
+<label for="consent">
+I agree to share my details with PATH INNOVATORS Consultancy for job related communication via call, SMS, WhatsApp & email.
+</label>
+</div>
+
+<button type="submit" id="submitBtn">Submit Application</button>
+
+</form>
+
+<div id="msg"></div>
+
+</div>
+
+<div class="thank-you" id="thankYou">
+<h2>✅ Thank you for connecting with</h2>
+<h2>PATH INNOVATORS</h2>
+<p>Our team will contact you shortly regarding suitable MNC opportunities.</p>
+</div>
+
+</div>
 </div>
 
 <script>
+
 const scriptURL = "https://script.google.com/macros/s/AKfycbyWS0yGkplc7S5jeG3SIXEjStqxGXUwHm_XI3Qaoy34Mmjt8Fk8MclWCdgaYsN4EcJ-7g/exec";
 const ADMIN_MOBILE = "918106404858";
 
-function submitForm() {
+document.getElementById("jobForm").addEventListener("submit", submitForm);
 
-  if (!document.getElementById("consent").checked) {
-    alert("Please accept the terms & consent to proceed.");
-    return;
-  }
+function submitForm(e){
 
-  const name = document.getElementById("name").value;
-  const mobile = document.getElementById("mobile").value;
-  const email = document.getElementById("email").value;
-  const qualification = document.getElementById("qualification").value;
-  const yop = document.getElementById("yop").value;
-  const experience = document.getElementById("experience").value;
-  const company = document.getElementById("company").value;
-  const location = document.getElementById("location").value;
+e.preventDefault();
 
-  const data = { name, mobile, email, qualification, yop, experience, company, location };
+const btn = document.getElementById("submitBtn");
+btn.disabled = true;
+btn.innerText = "Submitting...";
 
-  fetch(scriptURL, {
-    method: "POST",
-    body: JSON.stringify(data)
-  })
-  .then(res => res.json())
-  .then(() => {
+const name = document.getElementById("name").value.trim();
+const mobile = document.getElementById("mobile").value.trim();
+const email = document.getElementById("email").value.trim();
+const qualification = document.getElementById("qualification").value.trim();
+const yop = document.getElementById("yop").value.trim();
+const experience = document.getElementById("experience").value.trim();
+const company = document.getElementById("company").value;
+const location = document.getElementById("location").value.trim();
+const location = document.getElementById("Required job location").value.trim();
+const location = document.getElementById("location").value.trim();
 
-    // Hide form, show thank you
-    document.getElementById("formSection").style.display = "none";
-    document.getElementById("thankYou").style.display = "block";
-
-    // Candidate WhatsApp
-    const candidateMsg =
-      `Hello ${name},\n\nThank you for connecting with PATH INNOVATORS.\nOur team will contact you shortly regarding MNC job opportunities.\n\n– PATH INNOVATORS Team`;
-
-    window.open(`https://wa.me/91${mobile}?text=${encodeURIComponent(candidateMsg)}`, "_blank");
-
-    // Admin WhatsApp
-    const adminMsg =
-      `📥 New Job Application\n\nName: ${name}\nMobile: ${mobile}\nEmail: ${email}\nCompany: ${company}\nLocation: ${location}`;
-
-    window.open(`https://wa.me/${ADMIN_MOBILE}?text=${encodeURIComponent(adminMsg)}`, "_blank");
-
-  })
-  .catch(() => {
-    document.getElementById("msg").innerHTML = "❌ Submission failed. Please try again.";
-  });
+if(name=="" || mobile=="" || email==""){
+alert("Please fill all required fields");
+btn.disabled=false;
+btn.innerText="Submit Application";
+return;
 }
+
+if(!/^[6-9]\d{9}$/.test(mobile)){
+alert("Enter valid 10 digit mobile number");
+btn.disabled=false;
+btn.innerText="Submit Application";
+return;
+}
+
+const cleanMobile = mobile.replace(/\D/g,'');
+
+const data = {
+name,
+mobile:cleanMobile,
+email,
+qualification,
+yop,
+experience,
+company,
+location
+};
+
+fetch(scriptURL,{
+method:"POST",
+headers:{
+"Content-Type":"application/json"
+},
+body:JSON.stringify(data)
+})
+.then(res=>{
+if(!res.ok) throw new Error("Server Error");
+return res.text();
+})
+.then(()=>{
+
+document.getElementById("formSection").style.display="none";
+document.getElementById("thankYou").style.display="block";
+
+const candidateMsg =
+`Hello ${name},
+
+Thank you for connecting with PATH INNOVATORS.
+Our team will contact you shortly regarding MNC job opportunities.
+
+- PATH INNOVATORS Team`;
+
+window.open(`https://wa.me/91${cleanMobile}?text=${encodeURIComponent(candidateMsg)}`,"_blank");
+
+})
+.catch(()=>{
+document.getElementById("msg").innerHTML="❌ Submission failed. Please try again.";
+})
+.finally(()=>{
+btn.disabled=false;
+btn.innerText="Submit Application";
+});
+
+}
+
 </script>
 
 </body>
 </html>
-
-
-
